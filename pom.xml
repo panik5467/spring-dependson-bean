@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.spring</groupId>
+	<artifactId>Springdependsonannotationexample</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Spring @DependsOn annotation example</name>
+	<description>A tutorial to understand the @dependson annotation in spring framework.</description>
+<packaging>jar</packaging>
+
+	<!-- spring boot parent dependency jar -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.10</version>
+	</parent>
+	<dependencies>
+		<!-- spring boot jar -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>Springdependsonannotationexample</finalName>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>com.spring.Myapplication</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+
+      </plugin>
+    </plugins>
+
+	</build>
+
+
+
+</project>
